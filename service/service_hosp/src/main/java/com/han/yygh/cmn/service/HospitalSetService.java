@@ -1,4 +1,4 @@
-package com.han.yygh.service;
+package com.han.yygh.cmn.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.han.yygh.model.hosp.HospitalSet;

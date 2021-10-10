@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.han.yygh.common.MD5;
 import com.han.yygh.common.result.Result;
 import com.han.yygh.model.hosp.HospitalSet;
-import com.han.yygh.service.HospitalSetService;
+import com.han.yygh.cmn.service.HospitalSetService;
 import com.han.yygh.vo.hosp.HospitalSetQueryVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -19,6 +19,7 @@ import java.util.Random;
 @Api(tags = "医院设置管理")
 @RestController
 @RequestMapping("/admin/hosp/hospitalSet")
+@CrossOrigin
 public class HospitalSetController {
 
     // 注入服务
@@ -28,7 +29,7 @@ public class HospitalSetController {
     /**
      * 查询医院设置所有表信息
      */
-    @ApiOperation(value = "逻辑删除医院设置信息")
+    @ApiOperation(value = "医院设置信息")
     @GetMapping("findAll")
     public Result findAllHospital(){
         List<HospitalSet> list = hospitalSetService.list();
