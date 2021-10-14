@@ -1,8 +1,8 @@
 package com.han.yygh.common.helper;
 
 import com.alibaba.fastjson.JSONObject;
-import com.han.yygh.common.HttpUtil;
-import com.han.yygh.common.MD5;
+import com.han.yygh.common.util.HttpUtil;
+import com.han.yygh.common.util.MD5;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Date;
@@ -78,7 +78,7 @@ public class HttpRequestHelper {
      * @return
      */
     public static long getTimestamp() {
-        return new Date().getTime();
+        return System.currentTimeMillis();
     }
 
     /**

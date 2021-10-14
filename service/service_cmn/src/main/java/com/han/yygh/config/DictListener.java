@@ -1,4 +1,4 @@
-package com.han.yygh.cmn.config;
+package com.han.yygh.config;
 
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;

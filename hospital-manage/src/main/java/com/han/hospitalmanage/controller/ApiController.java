@@ -35,7 +35,7 @@ public class ApiController extends BaseController {
 
 	@RequestMapping("/hospitalSet/index")
 	public String getHospitalSet(ModelMap model,RedirectAttributes redirectAttributes) {
-		HospitalSet hospitalSet = hospitalSetMapper.selectById(2);
+		HospitalSet hospitalSet = hospitalSetMapper.selectById(1);
 		model.addAttribute("hospitalSet", hospitalSet);
 		return "hospitalSet/index";
 	}
@@ -76,6 +76,7 @@ public class ApiController extends BaseController {
 		} catch (YyghException e) {
 			return this.failurePage(e.getMessage(),request);
 		} catch (Exception e) {
+			e.printStackTrace();
 			return this.failurePage("数据异常",request);
 		}
 		return this.successPage(null,request);

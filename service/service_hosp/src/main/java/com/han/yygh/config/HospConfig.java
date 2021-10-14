@@ -1,4 +1,4 @@
-package com.han.yygh.cmn.config;
+package com.han.yygh.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
@@ -6,8 +6,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@MapperScan("com.han.yygh.cmn.mapper")
-public class CmnConfig {
+@MapperScan("com.han.yygh.mapper")
+public class HospConfig {
+    /**
+     * 分页插件
+     */
     @Bean
     public PaginationInterceptor paginationInterceptor(){
         return new PaginationInterceptor();
